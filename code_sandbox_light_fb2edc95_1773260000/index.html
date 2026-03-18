@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARWA MEDICAL | پێشانگای مەڕوە - پێداویستی پزیشکی</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <i class="fas fa-heartbeat"></i>
+            <p>MARWA MEDICAL</p>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/9647731532524" class="whatsapp-float" target="_blank" data-aos="zoom-in" data-aos-delay="1000">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Header -->
+    <header class= "header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <div class="logo" data-aos="fade-left">
+                        <i class="fas fa-plus-square medical-icon"></i>
+                        <div class="logo-text">
+                            <h1>پێشانگای مەڕوە</h1>
+                            <p>MARWA MEDICAL</p>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-menu" id="navMenu">
+                        <ul class="nav-list">
+                            <li><a href="#home" class="nav-link">سەرەکی</a></li>
+                            <li><a href="#catalog" class="nav-link">کەتەلۆگ</a></li>
+                            <li><a href="#about" class="nav-link">دەربارە</a></li>
+                            <li><a href="#contact" class="nav-link">پەیوەندی</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="nav-actions">
+                          <button class="admin-toggle-btn" id="adminToggle">
+                            <i class="fas fa-lock"></i>
+                            چوونە ژوورەوە
+                        </button>
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <button class="mobile-menu-btn" id="mobileMenuBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="floating-icons">
+                <i class="fas fa-heartbeat"></i>
+                <i class="fas fa-stethoscope"></i>
+                <i class="fas fa-pills"></i>
+                <i class="fas fa-syringe"></i>
+                <i class="fas fa-microscope"></i>
+                <i class="fas fa-user-md"></i>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1 class="hero-title">
+                    <span class="highlight">پێشانگای مەڕوە</span>
+                    <br>
+                </h1>
+                <p class="hero-subtitle">بۆ پێداویستی پزیشکی بەتاك و کۆ</p>
+                <p class="hero-description">
+                کوالێتی - متمانە - نرخی گونجاو
+                </p>
+                <div class="hero-buttons">
+                    <a href="#catalog" class="btn btn-primary">
+                        <i class="fas fa-shopping-cart"></i>
+                        سەیری کاڵاکان بکە
+                    </a>
+                    <a href="https://wa.me/9647731532524" class="btn btn-secondaryy" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        پەیوەندی بکە
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>بڕۆ خوارەوە</p>
+        </div>
+    </section>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <button class="close-search" id="closeSearch">
+                <i class="fas fa-times"></i>
+            </button>
+            <input type="text" id="searchInput" placeholder="گەڕان بۆ کاڵا..." class="search-input">
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <h2 class="section-title">دەربارەی پێشانگای مەڕوە مێدیکاڵ</h2>
+                    <p class="about-text">
+                        پێشانگای مەڕوە یەکێکە لە باشترین پێشانگاکانی پێداویستی پزیشکی لە هەرێمی کوردستان. ئێمە هەموو جۆرە پێداویستی پزیشکی دابین دەکەین بۆ تاك و کۆ.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>کوالێتی بەرز و گەرەنتی تەواو</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>نرخی گونجاو و داشکاندنی بەردەوام</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>متمانەی تەواو</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>گەیاندنی خێرا</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=600&fit=crop" alt="Medical Store">
+                    <div class="image-overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section" id="catalog">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">کەتەلۆگی کاڵاکان</h2>
+                <p class="section-subtitle">هەموو بەشەکانی پێداویستی پزیشکی</p>
+            </div>
+
+            <!-- Category 1: Medical Supplies -->
+            <div class="category-section" data-category="medical-supplies" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-briefcase-medical category-icon"></i>
+                        <h3 class="category-title">پێداویستی پزیشکی</h3>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('medical-supplies')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                         <button class="btn-delete-product" onclick="openDeleteProductsModal('medical-supplies')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('medical-supplies')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                  </div>
+                </div>
+                <div class="products-grid" id="products-medical-supplies">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Category 2: Pharmacy -->
+            <div class="category-section" data-category="pharmacy" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-pills category-icon"></i>
+                        <h3 class="category-title">دەرمان</h3>
+                        </button>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('pharmacy')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                         <button class="btn-delete-product" onclick="openDeleteProductsModal('pharmacy')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('pharmacy')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-pharmacy">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Category 3: Beauty & Cosmetics -->
+            <div class="category-section" data-category="beauty" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-spa category-icon"></i>
+                        <h3 class="category-title">جوانکاری</h3>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('beauty')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                         <button class="btn-delete-product" onclick="openDeleteProductsModal('beauty')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('beauty')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-beauty">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Category 4: Dental -->
+            <div class="category-section" data-category="dental" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-tooth category-icon"></i>
+                        <h3 class="category-title">ددان</h3>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('dental')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                        <button class="btn-delete-product" onclick="openDeleteProductsModal('dental')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('dental')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-dental">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Category 5: Women & Maternity -->
+            <div class="category-section" data-category="maternity" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-baby-carriage category-icon"></i>
+                        <h3 class="category-title">ژنان و منداڵبوون</h3>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('maternity')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                         <button class="btn-delete-product" onclick="openDeleteProductsModal('maternity')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('maternity')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-maternity">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Category 6: X-Ray & Ultrasound -->
+            <div class="category-section" data-category="xray" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-x-ray category-icon"></i>
+                        <h3 class="category-title">تیشك و سۆنەر</h3>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('xray')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                         <button class="btn-delete-product" onclick="openDeleteProductsModal('xray')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('xray')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-xray">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Category 7: Children -->
+            <div class="category-section" data-category="children" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-child category-icon"></i>
+                        <h3 class="category-title">منداڵان</h3>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('children')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                         <button class="btn-delete-product" onclick="openDeleteProductsModal('children')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('children')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-children">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Category 8: Medical Equipment -->
+            <div class="category-section" data-category="equipment" data-aos="fade-up">
+                <div class="category-header">
+                    <div class="category-title-group">
+                        <i class="fas fa-microscope category-icon"></i>
+                        <h3 class="category-title">جیهازی پزیشکی</h3>
+                    </div>
+                    <div class="category-actions">
+                        <button class="btn-add-product" onclick="openAddProductModal('equipment')">
+                            <i class="fas fa-plus"></i>
+                            زیادکردنی کاڵای نوێ
+                        </button>
+                         <button class="btn-delete-product" onclick="openDeleteProductsModal('equipment')">
+                            <i class="fas fa-trash"></i>
+                            سڕینەوەی کاڵا
+                        </button>
+                        <button class="btn-download-pdf" onclick="generatePDF('equipment')">
+                            <i class="fas fa-file-pdf"></i>
+                            دابەزاندنی PDF
+                        </button>
+                    </div>
+                </div>
+                <div class="products-grid" id="products-equipment">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add Product Modal -->
+    <div class="modal" id="addProductModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>زیادکردنی کاڵای نوێ</h3>
+                <button class="close-modal" onclick="closeAddProductModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="addProductForm" onsubmit="addProduct(event)">
+                <input type="hidden" id="productCategory" name="category">
+                
+                <div class="form-group">
+                    <label for="productName">ناوی کاڵا</label>
+                    <input type="text" id="productName" name="name" required placeholder="ناوی کاڵا بنووسە">
+                </div>
+                
+                <div class="form-group">
+                    <label for="productPrice">نرخ بەدینار </label>
+                    <input type="number" id="productPrice" name="price" placeholder="نرخی کاڵا بنووسە">
+                    <small>دەتوانیت نرخی کاڵا پڕ نەکەیتەوە .</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productImage">بەستەری وێنە (URL)</label>
+                    <input type="url" id="productImage" name="image" required placeholder="https://example.com/image.jpg">
+                    <small>وێنەیەک لە ئینتەرنێت دابەزێنە و بەستەرەکەی لێرە دابنێ</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productDescription">وەسف</label>
+                    <textarea id="productDescription" name="description" rows="3" placeholder="وەسفی کاڵا (ئارەزوومەندانە)"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeAddProductModal()">
+                        پاشگەزبوونەوە
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus"></i>
+                        زیادکردن
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+       <!-- Delete Products Modal -->
+    <div class="modal" id="deleteProductsModal">
+        <div class="modal-content">
+            <!-- Content will be dynamically generated -->
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">پەیوەندیمان پێوە بکە</h2>
+                <p class="section-subtitle">دەتوانن لە سەرجەم سۆشیال میدیاکانمان پەیوەندیمان پێوە بکەن</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/9647731532524" target="_blank">07731532524</a>
+                </div>
+                
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/9647511092930" target="_blank">07511092930</a>
+                </div>
+                
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                    <h4>Facebook</h4>
+                    <a href="https://www.facebook.com/share/1AYQ7gqCPs/" target="_blank">MARWA MEDICAL</a>
+                </div>
+                
+                <div class="contact-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h4>Instagram</h4>
+                    <a href="https://www.instagram.com/muhamad.ata01?igsh=aWxvdThuZ3JtaDkz" target="_blank">MARWA MEDICAL</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Company Info -->
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                        <div class="footer-logo">
+                            <i class="fas fa-plus-square"></i>
+                            <div>
+                                <h3>پێشانگای مەڕوە</h3>
+                                <p>MARWA MEDICAL</p>
+                            </div>
+                        </div>
+                        <p class="footer-desc">
+                            پێشانگای پزیشکی مەڕوە یەکێکە لە پێشانگا پێشڕەوەکانی پێداویستی پزیشکی لە هەرێمی کوردستان. ئێمە هەموو جۆرە پێداویستی پزیشکی دابین دەکەین.
+                        </p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/1AYQ7gqCPs/" target="_blank" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/muhamad.ata01?igsh=aWxvdThuZ3JtaDkz" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://wa.me/9647731532524" target="_blank" class="social-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="footer-title">بەستەرە خێراکان</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home"><i class="fas fa-chevron-left"></i> سەرەکی</a></li>
+                            <li><a href="#catalog"><i class="fas fa-chevron-left"></i> کەتەلۆگ</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-left"></i> دەربارە</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-left"></i> پەیوەندی</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="footer-title">بەشەکانی کەتەلۆگ</h4>
+                        <ul class="footer-links">
+                            <li><a href="#catalog"><i class="fas fa-chevron-left"></i> پێداویستی پزیشکی</a></li>
+                            <li><a href="#catalog"><i class="fas fa-chevron-left"></i> دەرمان</a></li>
+                            <li><a href="#catalog"><i class="fas fa-chevron-left"></i> جوانکاری</a></li>
+                            <li><a href="#catalog"><i class="fas fa-chevron-left"></i> ددان</a></li>
+                            <li><a href="#catalog"><i class="fas fa-chevron-left"></i> جیهازی پزیشکی</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="footer-title">پەیوەندیمان پێوە بکە</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <strong>WhatsApp</strong>
+                                    <a href="https://wa.me/9647731532524">07731532524</a>
+                                    <a href="https://wa.me/9647511092930">07511092930</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fab fa-facebook"></i>
+                                <div>
+                                    <strong>Facebook</strong>
+                                    <a href="https://www.facebook.com/share/1AYQ7gqCPs/" target="_blank">MARWA MEDICAL</a>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fab fa-instagram"></i>
+                                <div>
+                                    <strong>Instagram</strong>
+                                    <a href="https://www.instagram.com/muhamad.ata01?igsh=aWxvdThuZ3JtaDkz" target="_blank">MARWA MEDICAL</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2026 Marwa Medical | پێشانگای مەڕوە</p>
+                    <p class="made-with">
+                     کوالێتی - متمانە - نرخی گونجاو
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/pdf-generator.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/admin-system.js"></script>
+
+</body>
+</html>
